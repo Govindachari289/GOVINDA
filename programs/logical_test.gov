@@ -1,0 +1,14 @@
+CREATE age = 20
+CREATE marks = 85
+
+IF age >= 18 AND marks >= 50
+    PRINT "AND: Both conditions are TRUE"
+END
+
+IF age < 18 OR marks >= 50
+    PRINT "OR: At least one condition is TRUE"
+END
+
+IF NOT age < 18
+    PRINT "NOT: Condition is reversed"
+END

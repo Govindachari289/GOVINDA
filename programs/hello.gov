@@ -1,0 +1,2 @@
+CREATE name = "govinda"
+PRINT name

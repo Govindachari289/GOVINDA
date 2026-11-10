@@ -1,0 +1,6 @@
+FUNCTION subtract(a, b)
+    RETURN a - b
+END
+
+CREATE result = CALL subtract(10, 30)
+PRINT result

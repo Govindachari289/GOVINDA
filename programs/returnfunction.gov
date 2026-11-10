@@ -1,0 +1,14 @@
+FUNCTION sum(n)
+    CREATE total = 0
+    CREATE count = 1
+
+    WHILE count <= n
+        CREATE total = total + count
+        CREATE count = count + 1
+    END
+
+    RETURN total
+END
+
+CREATE result = CALL sum(5)
+PRINT result

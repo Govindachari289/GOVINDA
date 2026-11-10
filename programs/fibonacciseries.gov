@@ -1,0 +1,10 @@
+FUNCTION fibonacci(n)
+    IF n <= 1
+        RETURN n
+    ELSE
+        RETURN CALL fibonacci(n - 1) + CALL fibonacci(n - 2)
+    END
+END
+
+CREATE result = CALL fibonacci(7)
+PRINT result

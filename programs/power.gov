@@ -1,0 +1,10 @@
+FUNCTION power(base, exponent)
+    IF exponent == 0
+        RETURN 1
+    ELSE
+        RETURN base * CALL power(base, exponent - 1)
+    END
+END
+
+CREATE result = CALL power(12, 5)
+PRINT result

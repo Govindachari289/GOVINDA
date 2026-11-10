@@ -1,0 +1,11 @@
+CREATE numbers = [10, 20, 30]
+
+APPEND numbers 40
+PRINT numbers[3]
+
+SET numbers[1] = 99
+PRINT numbers[1]
+
+DELETE numbers 0
+PRINT numbers[0]
+PRINT numbers[1]

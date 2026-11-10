@@ -1,0 +1,10 @@
+FUNCTION calculate(n)
+    IF n <= 1
+        RETURN 1
+    ELSE
+        RETURN CALL calculate(n - 1) + CALL calculate(n - 2)
+    END
+END
+
+CREATE result = CALL calculate(5)
+PRINT result

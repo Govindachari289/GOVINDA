@@ -1,0 +1,10 @@
+CREATE count = 0
+
+REPEAT 3
+    IF count < 3
+        CREATE count = count + 1
+        PRINT count
+    END
+END
+
+PRINT "GOVINDA STABLE"

@@ -1,0 +1,10 @@
+FUNCTION sum(n)
+    IF n <= 0
+        RETURN 0
+    ELSE
+        RETURN n + CALL sum(n - 1)
+    END
+END
+
+CREATE result = CALL sum(5)
+PRINT result

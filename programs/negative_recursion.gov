@@ -1,0 +1,10 @@
+FUNCTION countdown(n)
+    IF n <= 0
+        RETURN 0
+    ELSE
+        RETURN CALL countdown(n - 1)
+    END
+END
+
+CREATE result = CALL countdown(-5)
+PRINT result

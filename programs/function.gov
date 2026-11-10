@@ -1,0 +1,10 @@
+FUNCTION counting
+    CREATE count = 1
+
+    WHILE count <= 5
+        PRINT count
+        CREATE count = count + 1
+    END
+END
+
+CALL counting

@@ -1,0 +1,6 @@
+CREATE first = "Hello"
+CREATE second = "GOVINDA"
+CREATE message = first + " " + second
+
+PRINT message
+PRINT "Welcome to " + second

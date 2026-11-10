@@ -1,0 +1,6 @@
+FUNCTION test()
+    RETURN 100
+END
+
+CREATE result = CALL test()
+PRINT result

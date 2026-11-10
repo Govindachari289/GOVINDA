@@ -1,0 +1,11 @@
+FUNCTION countdown(n)
+    IF n <= 0
+        PRINT "Done"
+        RETURN RETURN 80
+    ELSE
+        PRINT n
+        RETURN CALL countdown(n - 1)
+    END
+END
+
+CREATE result = CALL countdown(5)

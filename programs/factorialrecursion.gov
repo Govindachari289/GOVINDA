@@ -1,0 +1,10 @@
+FUNCTION factorial(n)
+    IF n <= 1
+        RETURN 1
+    ELSE
+        RETURN n * CALL factorial(n - 1)
+    END
+END
+
+CREATE result = CALL factorial(5)
+PRINT result
