@@ -137,9 +137,13 @@ GOVINDA/
 
 ## Requirements
 
-- GCC Compiler
-- Linux / Ubuntu / WSL
-- Visual Studio Code (recommended)
+GOVINDA can be built on multiple operating systems.
+
+- **Windows:** GCC (MinGW-w64)
+- **Linux:** GCC
+- **macOS:** GCC or Clang (not yet tested)
+
+Visual Studio Code is recommended but optional.
 
 ## Installation and Execution
 
@@ -147,29 +151,55 @@ GOVINDA/
 
 ```bash
 git clone https://github.com/Govindachari289/GOVINDA.git
-```
-
-### 2. Enter the project directory
-
-```bash
 cd GOVINDA
 ```
 
-### 3. Compile GOVINDA
+### 2. Windows (PowerShell / CMD)
+
+Install GCC using MinGW-w64 and make sure GCC is added to PATH.
+
+Compile:
 
 ```bash
-cd src
-
-gcc -Wall -Wextra -std=c11 -I../include main.c lexer.c ast.c parser.c interpreter.c -lm -o govinda
+gcc -Wall -Wextra -std=c11 -Iinclude src/main.c src/lexer.c src/ast.c src/parser.c src/interpreter.c -lm -o govinda.exe
 ```
 
-### 4. Run a GOVINDA program
+Run:
+
+```powershell
+.\govinda.exe programs\hello.gov
+```
+
+### 3. Linux / Ubuntu / WSL
+
+Install GCC if required:
 
 ```bash
-./govinda ../programs/your_program.gov
+sudo apt update
+sudo apt install build-essential
 ```
 
----
+Compile:
+
+```bash
+gcc -Wall -Wextra -std=c11 -Iinclude src/main.c src/lexer.c src/ast.c src/parser.c src/interpreter.c -lm -o govinda
+```
+
+Run:
+
+```bash
+./govinda programs/hello.gov
+```
+
+### 4. macOS
+
+Install Xcode Command Line Tools:
+
+```bash
+xcode-select --install
+```
+
+Build using GCC or Clang with the same source files and appropriate compiler command. macOS compatibility has not yet been tested.
 
 ## Development Roadmap
 
@@ -188,7 +218,7 @@ gcc -Wall -Wextra -std=c11 -I../include main.c lexer.c ast.c parser.c interprete
 - [x] Logical Operators
 - [x] Built-in Functions
 - [x] Initial Runtime Error Handling
-- [ ] Comprehensive Testing and Stability
+- [x] Comprehensive Testing and Stability
 - [ ] Version 1.0 Release
 - [ ] Future Compiler Development
 
