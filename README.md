@@ -33,22 +33,54 @@ GOVINDA currently supports:
 
 ## Download and Use (Windows, no setup needed)
 
-1. Go to the [Releases page](https://github.com/Govindachari289/GOVINDA/releases) and download `govinda.exe`.
-2. Create a file named `hello.gov` in the same folder with this code:
+You do not need to install GCC or any other tool. You only need Windows and VS Code (or any terminal).
+
+### Step 1: Download GOVINDA
+
+1. Open the [Releases page](https://github.com/Govindachari289/GOVINDA/releases).
+2. Under **GOVINDA v0.1**, click **govinda.exe** to download it.
+
+**Note:** Windows may show a "protected your PC" warning because the file is new. Click **More info**, then **Run anyway**.
+
+### Step 2: Make a folder
+
+1. Create a new folder, for example `MyGovinda`, on your Desktop.
+2. Move `govinda.exe` into that folder.
+
+### Step 3: Open the folder in VS Code
+
+1. Open VS Code.
+2. Click **File → Open Folder**.
+3. Choose the `MyGovinda` folder and click **Select Folder**.
+
+### Step 4: Create your first program
+
+1. In the left panel of VS Code, click the **New File** icon.
+2. Name the file `hello.gov`. GOVINDA programs use the `.gov` extension.
+3. Type this code and save with **Ctrl + S**:
 
 ```text
 PRINT "Hello, World!"
 ```
 
-3. Open PowerShell in that folder and run:
+### Step 5: Run it
+
+1. In VS Code, click **Terminal → New Terminal**.
+2. Type this command and press Enter:
 
 ```powershell
 .\govinda.exe hello.gov
 ```
 
-**Note:** Windows may show a "protected your PC" warning because the file is new. Click **More info**, then **Run anyway**.
+You will see:
 
-GOVINDA programs are saved with the `.gov` file extension.
+```text
+Hello, World!
+```
+
+**Troubleshooting:** If the terminal cannot find `govinda.exe`, make sure the terminal is open in the same folder as the file. Type `dir` to see the files in the current folder.
+
+**Linux and macOS users:** build GOVINDA from source using the steps in the "Build from Source" section below.
 
 ---
 
@@ -291,7 +323,7 @@ Build using GCC or Clang with the same source files and appropriate compiler com
 - [x] Initial Runtime Error Handling
 - [x] Comprehensive Testing and Stability
 - [x] First Release (v0.1)
-- [x] Version 1.0 Release
+- [ ] Version 1.0 Release
 - [ ] Future Compiler Development
 
 ---
