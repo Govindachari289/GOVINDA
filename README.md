@@ -31,6 +31,27 @@ GOVINDA currently supports:
 
 ---
 
+## Download and Use (Windows, no setup needed)
+
+1. Go to the [Releases page](https://github.com/Govindachari289/GOVINDA/releases) and download `govinda.exe`.
+2. Create a file named `hello.gov` in the same folder with this code:
+
+```text
+PRINT "Hello, World!"
+```
+
+3. Open PowerShell in that folder and run:
+
+```powershell
+.\govinda.exe hello.gov
+```
+
+**Note:** Windows may show a "protected your PC" warning because the file is new. Click **More info**, then **Run anyway**.
+
+GOVINDA programs are saved with the `.gov` file extension.
+
+---
+
 ## Example Programs
 
 ### Hello World
@@ -38,6 +59,13 @@ GOVINDA currently supports:
 ```text
 PRINT "Hello, World!"
 PRINT "Welcome to GOVINDA"
+```
+
+Output:
+
+```text
+Hello, World!
+Welcome to GOVINDA
 ```
 
 ### Variables and Arithmetic
@@ -49,6 +77,14 @@ CREATE result = a + b
 
 PRINT result
 ```
+
+Output:
+
+```text
+30
+```
+
+> **Note:** `CREATE` is used both to make a new variable and to change the value of an existing one.
 
 ### Conditional Statements
 
@@ -62,6 +98,12 @@ ELSE
 END
 ```
 
+Output:
+
+```text
+You are an adult
+```
+
 ### Loops
 
 ```text
@@ -73,6 +115,16 @@ WHILE count <= 5
 END
 ```
 
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
 ### Functions
 
 ```text
@@ -82,6 +134,12 @@ END
 
 CREATE result = add(10, 20)
 PRINT result
+```
+
+Output:
+
+```text
+30
 ```
 
 ### Recursion
@@ -98,6 +156,12 @@ END
 PRINT factorial(5)
 ```
 
+Output:
+
+```text
+120
+```
+
 ### Arrays
 
 ```text
@@ -105,6 +169,13 @@ CREATE numbers = [10, 20, 30, 40]
 
 PRINT numbers[0]
 PRINT numbers[2]
+```
+
+Output:
+
+```text
+10
+30
 ```
 
 ---
@@ -128,24 +199,22 @@ GOVINDA/
 │   └── interpreter.c
 │
 ├── programs/
-├── tests/
+├── LICENSE
 ├── README.md
 └── .gitignore
 ```
 
 ---
 
-## Requirements
+## Build from Source
 
-GOVINDA can be built on multiple operating systems.
+If you want to build GOVINDA yourself, you need GCC.
 
 - **Windows:** GCC (MinGW-w64)
 - **Linux:** GCC
 - **macOS:** GCC or Clang (not yet tested)
 
 Visual Studio Code is recommended but optional.
-
-## Installation and Execution
 
 ### 1. Clone the repository
 
@@ -201,6 +270,8 @@ xcode-select --install
 
 Build using GCC or Clang with the same source files and appropriate compiler command. macOS compatibility has not yet been tested.
 
+---
+
 ## Development Roadmap
 
 - [x] Lexer and Tokenizer
@@ -219,8 +290,15 @@ Build using GCC or Clang with the same source files and appropriate compiler com
 - [x] Built-in Functions
 - [x] Initial Runtime Error Handling
 - [x] Comprehensive Testing and Stability
+- [x] First Release (v0.1)
 - [ ] Version 1.0 Release
 - [ ] Future Compiler Development
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
